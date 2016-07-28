@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="impl_1" LaunchDir="/home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="post_route_phys_opt_design"/>
+</Runs>
+

@@ -1,0 +1,671 @@
+#-----------------------------------------------------------
+# Vivado v2015.3 (64-bit)
+# SW Build 1368829 on Mon Sep 28 20:06:39 MDT 2015
+# IP Build 1367837 on Mon Sep 28 08:56:14 MDT 2015
+# Start of session at: Thu Jul 28 16:03:50 2016
+# Process ID: 7882
+# Current directory: /home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.runs/synth_1
+# Command line: vivado -log bm_rng.vds -mode batch -messageDb vivado.pb -notrace -source bm_rng.tcl
+# Log file: /home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.runs/synth_1/bm_rng.vds
+# Journal file: /home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source bm_rng.tcl -notrace
+Command: synth_design -top bm_rng -part xc7a100tfgg484-1 -flatten_hierarchy none -fanout_limit 64 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-1223] The version limit for your license is '2016.04' and will expire in -89 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1107.020 ; gain = 158.840 ; free physical = 7975 ; free virtual = 21369
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'bm_rng' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/bm_rng.v:2]
+	Parameter TAUS_PIPE bound to: 3 - type: integer 
+	Parameter LZD_PIPE bound to: 1 - type: integer 
+	Parameter LOG_PIPE bound to: 9 - type: integer 
+	Parameter SQR_PIPE bound to: 7 - type: integer 
+	Parameter COS_PIPE bound to: 4 - type: integer 
+	Parameter TOT_PIPE bound to: 18 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'taus' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/taus.v:2]
+INFO: [Synth 8-256] done synthesizing module 'taus' (1#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/taus.v:2]
+INFO: [Synth 8-638] synthesizing module 'sin_cos_unit' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/sin_cos_unit.v:1]
+	Parameter C2_g bound to: 40'b0000000000000001000001001100000011101101 
+	Parameter C1_g bound to: 40'b1111111111111111110010101011010011010001 
+	Parameter C0_g bound to: 40'b1111111111111111001010101010000110100110 
+	Parameter pt9 bound to: 40'b0000000000000000111111111111101111111111 
+	Parameter COS_SEL_BITS bound to: 7 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'sin_cos_coef' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/sin_cos_coef.v:2]
+INFO: [Synth 8-256] done synthesizing module 'sin_cos_coef' (2#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/sin_cos_coef.v:2]
+INFO: [Synth 8-226] default block is never used [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/sin_cos_unit.v:114]
+INFO: [Synth 8-256] done synthesizing module 'sin_cos_unit' (3#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/sin_cos_unit.v:1]
+INFO: [Synth 8-638] synthesizing module 'log_unit' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:1]
+	Parameter C2_e bound to: 40'b0000000000000001001001010000001101000100 
+	Parameter C1_e bound to: 40'b1111111111111110100111011001100010101101 
+	Parameter C0_e bound to: 40'b0000000000000000001110111101111110010010 
+	Parameter ln2 bound to: 40'b0000000000000000101100010111001000010111 
+	Parameter LN_SEL_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'lzd' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/lzd.v:2]
+WARNING: [Synth 8-3848] Net scan_out0 in module/entity lzd does not have driver. [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/lzd.v:26]
+INFO: [Synth 8-256] done synthesizing module 'lzd' (4#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/lzd.v:2]
+WARNING: [Synth 8-350] instance 'lzd' of module 'lzd' requires 8 connections, but only 4 given [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:49]
+INFO: [Synth 8-256] done synthesizing module 'log_unit' (5#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:1]
+INFO: [Synth 8-638] synthesizing module 'square_root_unit' [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:1]
+	Parameter C2_f bound to: 40'b0000000000000000100010111000100110011111 
+	Parameter C1_f bound to: 40'b0000000000000000100000001101101000001100 
+	Parameter C0_f bound to: 40'b1111111111111111111101101110111101011010 
+	Parameter SQ_SEL_BITS bound to: 6 - type: integer 
+WARNING: [Synth 8-350] instance 'lzd' of module 'lzd' requires 8 connections, but only 4 given [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:49]
+INFO: [Synth 8-256] done synthesizing module 'square_root_unit' (6#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:1]
+WARNING: [Synth 8-3848] Net scan_out0 in module/entity bm_rng does not have driver. [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/bm_rng.v:33]
+INFO: [Synth 8-256] done synthesizing module 'bm_rng' (7#1) [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/bm_rng.v:2]
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_out0
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_in0
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_en
+WARNING: [Synth 8-3331] design bm_rng has unconnected port test_mode
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1146.895 ; gain = 198.715 ; free physical = 7934 ; free virtual = 21328
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin lzd:scan_in0 to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:49]
+WARNING: [Synth 8-3295] tying undriven pin lzd:scan_en to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:49]
+WARNING: [Synth 8-3295] tying undriven pin lzd:test_mode to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/log_unit.v:49]
+WARNING: [Synth 8-3295] tying undriven pin lzd:scan_in0 to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:49]
+WARNING: [Synth 8-3295] tying undriven pin lzd:scan_en to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:49]
+WARNING: [Synth 8-3295] tying undriven pin lzd:test_mode to constant 0 [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/src/square_root_unit.v:49]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1146.895 ; gain = 198.715 ; free physical = 7934 ; free virtual = 21328
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.srcs/constrs_1/new/bm_rng.xdc]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'clk' is not supported, ignoring it [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.srcs/constrs_1/new/bm_rng.xdc:14]
+Finished Parsing XDC File [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.srcs/constrs_1/new/bm_rng.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/vxs9946/ee799/vxs9946_f2015/bm_rng/xilinx/bm_rng/bm_rng.srcs/constrs_1/new/bm_rng.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bm_rng_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bm_rng_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1499.855 ; gain = 0.000 ; free physical = 7664 ; free virtual = 21059
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7900 
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7660 ; free virtual = 21055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7660 ; free virtual = 21055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7660 ; free virtual = 21055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7660 ; free virtual = 21054
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     31 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 12    
+	   3 Input     32 Bit         XORs := 2     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 14    
+	               31 Bit    Registers := 4     
+	               20 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
+	               17 Bit    Registers := 5     
+	               16 Bit    Registers := 30    
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 3     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     17 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module bm_rng 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 26    
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module taus 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 6     
+	   3 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+Module sin_cos_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 4     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 2     
+Module lzd 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 12    
+Module log_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     31 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               31 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+Module square_root_unit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               17 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	                7 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7660 ; free virtual = 21054
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP yga_reg_10, operation Mode is: A*B.
+DSP Report: operator yga_reg_10 is absorbed into DSP yga_reg_10.
+DSP Report: Generating DSP ygb_reg_10, operation Mode is: A*B.
+DSP Report: operator ygb_reg_10 is absorbed into DSP ygb_reg_10.
+DSP Report: Generating DSP ygb_reg_20, operation Mode is: A*B.
+DSP Report: operator ygb_reg_20 is absorbed into DSP ygb_reg_20.
+DSP Report: Generating DSP y_e_reg_10, operation Mode is: A*B.
+DSP Report: operator y_e_reg_10 is absorbed into DSP y_e_reg_10.
+DSP Report: Generating DSP e_p0, operation Mode is: (A:0xb17217)*B.
+DSP Report: operator e_p0 is absorbed into DSP e_p0.
+DSP Report: Generating DSP y_f_reg_10, operation Mode is: A*B.
+DSP Report: operator y_f_reg_10 is absorbed into DSP y_f_reg_10.
+DSP Report: Generating DSP y_f_reg_20, operation Mode is: A*B.
+DSP Report: operator y_f_reg_20 is absorbed into DSP y_f_reg_20.
+DSP Report: Generating DSP x0_out0, operation Mode is: A*B.
+DSP Report: operator x0_out0 is absorbed into DSP x0_out0.
+DSP Report: Generating DSP x1_out0, operation Mode is: A*B.
+DSP Report: operator x1_out0 is absorbed into DSP x1_out0.
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_out0
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_in0
+WARNING: [Synth 8-3331] design bm_rng has unconnected port scan_en
+WARNING: [Synth 8-3331] design bm_rng has unconnected port test_mode
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7562 ; free virtual = 20956
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7562 ; free virtual = 20956
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+------------+---------------+----------------+
+|Module Name      | RTL Object | Depth x Width | Implemented As | 
++-----------------+------------+---------------+----------------+
+|sin_cos_coef     | rom        | 128x12        | LUT            | 
+|sin_cos_coef     | rom__1     | 128x17        | LUT            | 
+|log_unit         | rom__2     | 256x11        | LUT            | 
+|square_root_unit | extrom     | 64x20         | Block RAM      | 
+|square_root_unit | rom__3     | 64x8          | LUT            | 
+|sin_cos_coef     | rom__4     | 128x17        | LUT            | 
+|sin_cos_coef     | rom__5     | 128x17        | LUT            | 
+|log_unit         | rom__6     | 256x11        | LUT            | 
+|square_root_unit | rom__7     | 64x8          | LUT            | 
++-----------------+------------+---------------+----------------+
+
+
+DSP:
++-----------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sin_cos_unit     | A*B            | No           | 12     | 7      | 48     | 25     | 19     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|sin_cos_unit     | A*B            | No           | 12     | 7      | 48     | 25     | 19     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|sin_cos_unit     | A*B            | No           | 16     | 16     | 48     | 25     | 32     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|log_unit         | A*B            | No           | 23     | 11     | 48     | 25     | 34     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|log_unit         | (A:0xb17217)*B | No           | 25     | 7      | 48     | 25     | 32     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|square_root_unit | A*B            | No           | 12     | 11     | 48     | 25     | 23     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|square_root_unit | A*B            | No           | 17     | 17     | 48     | 25     | 34     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|bm_rng           | A*B            | No           | 16     | 16     | 48     | 25     | 32     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|bm_rng           | A*B            | No           | 16     | 16     | 48     | 25     | 32     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
++-----------------+----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_0_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_2_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (taus:/\a_1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sq/\coef1_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sq/\coef1_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sq/\coef1_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sq/\coef1_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (log_a/\e_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[31] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[30] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[29] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[28] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[27] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[26] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[25] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[24] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[23] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[22] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[21] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[20] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[19] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[18] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[17] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[16] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[15] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[14] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[13] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[12] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[11] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[10] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[9] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[8] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_1_reg[7] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[31] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[30] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[29] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[28] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[27] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[26] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[25] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[24] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[23] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[22] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_2_reg[21] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[31] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[30] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[29] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[28] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[27] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[26] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[25] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[24] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[23] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[22] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[21] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[20] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[19] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[18] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[17] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[16] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[15] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[14] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\a_0_reg[13] ) is unused and will be removed from module taus.
+WARNING: [Synth 8-3332] Sequential element (\coef0_xgb_reg_reg[18] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef0_xgb_reg_reg[17] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef0_xgb_reg_reg[16] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[47] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[46] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[45] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[44] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[43] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[42] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[41] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[40] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[39] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[38] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[37] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[36] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[35] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[34] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[33] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[32] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\x_e_reg[31] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\y_e_reg_1_reg[30] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\e_p_reg[30] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\e_pp_reg[30] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\e_reg[0] ) is unused and will be removed from module log_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef1_reg_reg[11] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef1_reg_reg[10] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef1_reg_reg[9] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef1_reg_reg[8] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\y_f_reg_2_reg[16] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\f_reg[16] ) is unused and will be removed from module square_root_unit.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sq/lzd/\numz_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (\numz_reg[5] ) is unused and will be removed from module lzd.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7473 ; free virtual = 20872
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 7473 ; free virtual = 20872
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8119 ; free virtual = 21513
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\coef0_reg_reg[19] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef0_reg_reg[18] ) is unused and will be removed from module square_root_unit.
+WARNING: [Synth 8-3332] Sequential element (\coef0_reg_reg[17] ) is unused and will be removed from module square_root_unit.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8090 ; free virtual = 21484
+---------------------------------------------------------------------------------
+Finished Parallel Timing Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8090 ; free virtual = 21484
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8090 ; free virtual = 21484
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[15] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[14] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[13] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[12] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[11] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[10] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[9] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[8] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[7] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[6] ) is unused and will be removed from module sin_cos_unit.
+WARNING: [Synth 8-3332] Sequential element (\yga_reg_1_reg[5] ) is unused and will be removed from module sin_cos_unit.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin lzd:din[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin sq:e[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register:
++------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|bm_rng      | g0_12_reg[15] | 12     | 16    | YES          | NO                 | NO                | 16     | 0       | 
+|bm_rng      | g1_12_reg[15] | 12     | 16    | YES          | NO                 | NO                | 16     | 0       | 
++------------+---------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    22|
+|3     |DSP48E1 |     9|
+|4     |LUT1    |    36|
+|5     |LUT2    |   245|
+|6     |LUT3    |   307|
+|7     |LUT4    |    91|
+|8     |LUT5    |   109|
+|9     |LUT6    |   302|
+|10    |MUXF7   |    60|
+|11    |MUXF8   |     6|
+|12    |SRL16E  |    32|
+|13    |FDCE    |   682|
+|14    |FDRE    |    32|
+|15    |IBUF    |   194|
+|16    |OBUF    |    33|
+|17    |OBUFT   |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |  2162|
+|2     |  taus_a |taus__1          |   340|
+|3     |  taus_b |taus             |   340|
+|4     |  sc     |sin_cos_unit     |   365|
+|5     |    XGA  |sin_cos_coef__1  |    74|
+|6     |    XGB  |sin_cos_coef     |    74|
+|7     |  log_a  |log_unit         |   392|
+|8     |    lzd  |lzd__1           |    52|
+|9     |  sq     |square_root_unit |   308|
+|10    |    lzd  |lzd              |    33|
++------+---------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 285 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1499.855 ; gain = 84.625 ; free physical = 8088 ; free virtual = 21482
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 551.676 ; free physical = 8088 ; free virtual = 21482
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 225 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+90 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1499.855 ; gain = 480.207 ; free physical = 8087 ; free virtual = 21482
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1516.891 ; gain = 0.000 ; free physical = 8087 ; free virtual = 21482
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 28 16:04:18 2016...

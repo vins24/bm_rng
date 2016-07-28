@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../../src/lzd.v"
+verilog xil_defaultlib  "../../../../../src/sin_cos_coef.v"
+verilog xil_defaultlib  "../../../../../src/taus.v"
+verilog xil_defaultlib  "../../../../../src/sin_cos_unit.v"
+verilog xil_defaultlib  "../../../../../src/square_root_unit.v"
+verilog xil_defaultlib  "../../../../../src/log_unit.v"
+verilog xil_defaultlib  "../../../../../src/bm_rng.v"
+verilog xil_defaultlib  "../../../../../src/bm_rng_test.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

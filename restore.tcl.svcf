@@ -1,0 +1,171 @@
+# SimVision Command Script (Thu Jul 28 01:17:10 PM EDT 2016)
+#
+# Version 14.10.s032
+#
+# You can restore this configuration with:
+#
+#      ncverilog +ncaccess+r +nclinedebug +ncvpicompat+1364v1995 +nowarnTFNPC +nowarnIWFA +nowarnSVTL +nowarnSDFNCAP +gui -s -f etc/bm_rng.rtl.f -input etc/dumpsaif.tcl +tcl+restore.tcl
+#
+
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set toolbar-Standard-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set toolbar-Windows-WaveWindow {
+  usual
+  position -pos 4
+}
+preferences set whats-new-dont-show-at-startup 1
+
+#
+# Simulator
+#
+database require simulator -hints {
+	simulator "ncverilog +ncaccess+r +nclinedebug +ncvpicompat+1364v1995 +nowarnTFNPC +nowarnIWFA +nowarnSVTL +nowarnSDFNCAP +gui -s -f etc/bm_rng.rtl.f -input etc/dumpsaif.tcl -input restore.tcl"
+}
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 730x500+222+137}] != ""} {
+    window geometry "Design Browser 1" 730x500+222+137
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {simulator::[format {test}]} ]
+browser set \
+    -signalsort name
+browser yview see [subst  {simulator::[format {test}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1249x781+34+57}] != ""} {
+    window geometry "Waveform 1" 1249x781+34+57
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s5}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s4}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s3}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s2}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s1}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.s0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.clk}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.memAddress}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.memRange}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.reset}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.valid}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x0_error}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x0[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x0_m[15:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x1_error}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x1[15:0]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x1_m[15:0]}]}
+	} ]]
+set id [waveform add -cdivider divider]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x1Mem[0:199999]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.x0Mem[0:199999]}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.scan_en}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.scan_in0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.scan_out0}]}
+	} ]]
+set id [waveform add -signals [subst  {
+	{simulator::[format {test.test_mode}]}
+	} ]]
+
+waveform xview limits 415ns 463ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 730x250+257+685
+
+#
+# Layout selection
+#
+

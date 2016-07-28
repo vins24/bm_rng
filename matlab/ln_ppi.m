@@ -1,5 +1,5 @@
 clc;
-N=64;
+N=256;
 % create vector of equally spaced points in [1,2]
 x=linspace(1,2,N);
 % compute corresponding y-values

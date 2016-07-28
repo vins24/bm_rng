@@ -7,7 +7,11 @@ simv.daidir/
 csrc/
 
 INCA_libs/
+netlist/
+report/
 work_lib/
+saif/
+sdf/
 spf/
 .simvision/
 waves.shm/

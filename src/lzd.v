@@ -32,6 +32,8 @@ output
 
 wire [47:0] din;
 
+reg [5:0] numz;                 // output number of leading zeros
+
 // extend input operand to 64 bits
 wire [63:0] op = {din, 16'hffff} ;
 
@@ -178,6 +180,12 @@ assign v5[1] = v4[3] | v4[2];
 
 assign p6 = {~v5[1], (v5[1] ? p5[1] : p5[0])};
 
-assign numz = p6;
+always @(posedge clk or posedge reset)
+begin
+	if (reset)
+		numz <= 0;
+	else
+		numz <= p6;
+end
 
 endmodule

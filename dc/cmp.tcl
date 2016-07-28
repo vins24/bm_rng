@@ -6,7 +6,7 @@ set design_name bm_rng
 
 set my_type "_rtl"
 
-set my_max_area 20000
+set my_max_area 25000
 #
 # compile effort can be: low, medium, high
 #

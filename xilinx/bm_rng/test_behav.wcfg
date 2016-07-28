@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="200050333333fs"></ZoomStartTime>
+      <ZoomEndTime time="200121933334fs"></ZoomEndTime>
+      <Cursor1Time time="200110000000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="19" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/scan_out0">
+      <obj_property name="ElementShortName">scan_out0</obj_property>
+      <obj_property name="ObjectShortName">scan_out0</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/scan_in0">
+      <obj_property name="ElementShortName">scan_in0</obj_property>
+      <obj_property name="ObjectShortName">scan_in0</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/scan_en">
+      <obj_property name="ElementShortName">scan_en</obj_property>
+      <obj_property name="ObjectShortName">scan_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/test_mode">
+      <obj_property name="ElementShortName">test_mode</obj_property>
+      <obj_property name="ObjectShortName">test_mode</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/x0_error">
+      <obj_property name="ElementShortName">x0_error</obj_property>
+      <obj_property name="ObjectShortName">x0_error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/x0">
+      <obj_property name="ElementShortName">x0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x0[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/x0_m">
+      <obj_property name="ElementShortName">x0_m[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x0_m[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/x1">
+      <obj_property name="ElementShortName">x1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x1[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/test/x1_error">
+      <obj_property name="ElementShortName">x1_error</obj_property>
+      <obj_property name="ObjectShortName">x1_error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/x1_m">
+      <obj_property name="ElementShortName">x1_m[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x1_m[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s0">
+      <obj_property name="ElementShortName">s0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s0[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s1">
+      <obj_property name="ElementShortName">s1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s1[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s2">
+      <obj_property name="ElementShortName">s2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s2[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s3">
+      <obj_property name="ElementShortName">s3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s3[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s4">
+      <obj_property name="ElementShortName">s4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s4[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/test/s5">
+      <obj_property name="ElementShortName">s5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s5[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,27 @@
+
+.Xil/
+
+*.zip
+*.tar
+*.Z
+*.gz
+*.bz2
+*.lzma
+*.xz
+*.lzo
+
+#
+# git files that we don't want to ignore even it they are dot-files
+#
+!.gitignore
+
+*.log
+*.bak
+*.orig
+*~
+\#*#
+*.sdf.X
+.nfs*
+
+*.jou
+*.cache/

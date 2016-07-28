@@ -6,6 +6,7 @@ src/bm_rng_test.v
 src/bm_rng.v
 src/log_unit.v
 src/lzd.v
+src/sin_cos_coef.v
 src/sin_cos_unit.v
 src/square_root_unit.v
 src/taus.v

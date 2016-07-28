@@ -5,6 +5,7 @@ set all_modules [list \
 "bm_rng" \
 "log_unit" \
 "lzd" \
+"sin_cos_coef" \
 "sin_cos_unit" \
 "square_root_unit" \
 "taus" \
