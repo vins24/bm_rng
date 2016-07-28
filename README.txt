@@ -18,6 +18,7 @@ dc.......synthesis tool scripts
 pt.......timing analysis tool scripts
 cons.....design constraints
 matlab...MATLAB source code
+xilinx...project directory for Xilinx Vivado
 
 
 The following scripts are used to simulate, synthesize the
@@ -31,4 +32,19 @@ design:
 Note, the version of MATLAB installed is not
 compatible with the OS / GNU Compiler Collection;
 incorporating MEX files causes segmentation faults.
+
+Notes for MATLAB code:
+
+Run these 3 scripts first to generate the PWL coefficients
+for the top level Box Muller RNG model, and also to generate
+the coefficient Verilog RTL:
+
+matlab/cosine_coef.m
+matlab/ln_coef.m
+matlab/sqrt_coef.m
+
+Then run the top level Box Muller RNG model to generate the
+PDF and golden test vectors:
+
+matlab/box_muller.m
 
